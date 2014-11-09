@@ -22,6 +22,7 @@ if [ $(uname -s) = 'Darwin' ]; then
 fi
 
 if [ $(uname -s) = 'Linux' ]; then
+	alias vim='vim.nox'
 	alias c='clear'
 	alias l='ls -CF --color=auto'
 	alias ls='ls -CF --color=auto'
