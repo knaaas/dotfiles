@@ -1,0 +1,13 @@
+!1 Normal 
+!2 shift 
+!3 Mode_switch 
+!4 Mode_switch + shift 
+!5 ISO_Level3_Shift  
+!6 ISO_Level3_Shift + shift
+
+!Switch Caps_Lock
+!Keysyms are not updated until whole scipts has been executed.
+clear lock
+keysym Caps_Lock = Escape
+keysym Escape = Caps_Lock
+add lock = Caps_Lock
