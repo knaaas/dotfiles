@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#I found this script here https://github.com/mathiasbynens/dotfiles
 
 cd "$(dirname "${BASH_SOURCE}")";
 
