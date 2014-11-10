@@ -1,6 +1,8 @@
 PATH="$PATH:$HOME/bin"
 PS1='[\u@\h \W]\$ '
 
+bind '"jj": vi-movement-mode'     #after 'set keymap vi-insert'?
+
 #Color-enabled man pages
 man() {
 	env LESS_TERMCAP_mb=$'\E[01;31m' \
@@ -19,7 +21,7 @@ export EDITOR="vim";
 export GREP_OPTIONS="--color=auto";
 
 shopt -s cdspell;
-set -o vi
+#set -o vi
 
 alias -- -="cd -"
 alias ..="cd .."
