@@ -5,9 +5,11 @@
 !5 ISO_Level3_Shift  
 !6 ISO_Level3_Shift + shift
 
-!Switch Caps_Lock
 !Keysyms are not updated until whole scipts has been executed.
-clear lock
-keysym Caps_Lock = Escape
-keysym Escape = Caps_Lock
-add lock = Caps_Lock
+remove Lock = Caps_Lock
+remove Control = Control_L
+keysym Control_L = Caps_Lock
+keysym Caps_Lock = Control_L
+add Lock = Caps_Lock
+add Control = Control_L
+

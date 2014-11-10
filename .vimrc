@@ -43,5 +43,5 @@ set title
 
 map Y y$
 let mapleader=","
-inoremap <c-c> <esc>
+inoremap jj <esc>
 au BufRead,BufNewFile *.md setl ft=md
