@@ -20,8 +20,8 @@ set directory=~/.vim/swaps
 " Highlight current line
 set cursorline
 " Show “invisible” characters
-set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set list
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+"set list
 " Always show status line
 set laststatus=2
 " Enable mouse in all modes
@@ -35,7 +35,7 @@ set showmode
 " Autoindent new line
 set autoindent
 " Make tabs as wide as two spaces
-set tabstop=2
+set tabstop=4
 " Enable line numbers
 set number
 " Show the filename in the window titlebar
