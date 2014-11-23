@@ -38,7 +38,7 @@ set shortmess=I
 set showmode
 " Autoindent new line
 set autoindent
-" Make tabs as wide as two spaces
+" Make tabs as wide as four spaces
 set tabstop=4
 " Enable line numbers
 set number
