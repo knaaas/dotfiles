@@ -1,3 +1,6 @@
+execute pathogen#infect()
+filetype plugin indent on
+
 "Solarized Dark Theme 
 set background=dark
 colorscheme solarized
