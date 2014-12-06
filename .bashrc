@@ -7,7 +7,7 @@ HISTCONTROL=ignoreboth		# Don't put duplicate lines or lines starting with space
 shopt -s checkwinsize
 
 export EDITOR="vim"; 		# Make vim the default editor
-export GREP_OPTIONS="--color=j" # Always enable colored `grep` output
+export GREP_OPTIONS="--color=auto" # Always enable colored `grep` output
 shopt -s cdspell;
 #set -o vi
 
