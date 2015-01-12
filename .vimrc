@@ -1,27 +1,17 @@
 filetype plugin on
 
-
 "Solarized Dark Theme 
 set background=dark
 colorscheme solarized
 let g:solarized_termtrans=1
-" Enable syntax highlighting
-syntax enable
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
 set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
-" Show cursor position in the right corner of window 
-set ruler
 " Optimize for fast terminal connections
 set ttyfast
-" Centralize backups, swapfiles and undo history
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-" Highlight current line
-set cursorline
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 "set list
@@ -29,24 +19,32 @@ set cursorline
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
-" Disable error bells
-set noerrorbells
-" Don’t show the intro message when starting Vim
-set shortmess=I
-" Show the current mode
-set showmode
+" Enable line numbers
+
+" VISUAL
+set number
+syntax enable	" Enable syntax highlighting
+set cursorline	" Highlight current line
+set title 		" Show the filename in the window titlebar
+
+" STATUS BAR
+set showmode	" Show the current mode
+set ruler		" Show cursor position in the right corner of window 
+
+" RECOVERY
+set backupdir=~/.vim/backups
+set directory=~/.vim/swaps
+
+" DISABLE ANNOYING FEATURES 
+set noerrorbells	" Disable error bell
+set shortmess=I		" Don’t show the intro message when starting Vim
 
 " INDENTATION
 filetype indent on	" Automatically switch to cindent if it is supported
 set shiftwidth=4	" Make autoindentation four spaces
+set tabstop=4		" Make your tabs as wide as four spaces
 
-" Make tabs as wide as four spaces
-set tabstop=4
-" Enable line numbers
-set number
-" Show the filename in the window titlebar
-set title
-
+"KEYBINDINGS
 map Y y$
 let mapleader=","
 inoremap jj <esc>
