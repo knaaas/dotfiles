@@ -1,6 +1,5 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-filetype plugin indent on
+filetype plugin on
+
 
 "Solarized Dark Theme 
 set background=dark
@@ -36,8 +35,11 @@ set noerrorbells
 set shortmess=I
 " Show the current mode
 set showmode
-" Autoindent new line
-set autoindent
+
+" INDENTATION
+filetype indent on	" Automatically switch to cindent if it is supported
+set shiftwidth=4	" Make autoindentation four spaces
+
 " Make tabs as wide as four spaces
 set tabstop=4
 " Enable line numbers
@@ -49,3 +51,4 @@ map Y y$
 let mapleader=","
 inoremap jj <esc>
 au BufRead,BufNewFile *.md setl ft=md
+au BufRead,BufNewFile *.cpp setl ft=cpp
