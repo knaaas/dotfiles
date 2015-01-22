@@ -1,3 +1,4 @@
+"TODO \C-c wq
 filetype plugin on
 
 "Solarized Dark Theme 
@@ -19,10 +20,12 @@ set ttyfast
 set laststatus=2
 " Enable mouse in all modes
 set mouse=a
-" Enable line numbers
+
+"Autowrite files when using next and previous
+set autowrite
 
 " VISUAL
-set number
+set number		" Enable line numbers
 syntax enable	" Enable syntax highlighting
 set cursorline	" Highlight current line
 set title 		" Show the filename in the window titlebar
