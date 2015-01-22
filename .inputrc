@@ -1,5 +1,6 @@
-set editing-mode vi
-set keymap vi
-
-set keymap vi-insert
-"jj": vi-movement-mode
+#use vi as readline editor
+set editing-mode vi	
+set bell-style none
+#keymaps for vi-insert below
+set keymap vi-insert	
+	jj: vi-movement-mode
