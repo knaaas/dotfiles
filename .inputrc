@@ -3,4 +3,4 @@ set editing-mode vi
 set bell-style none
 #keymaps for vi-insert below
 set keymap vi-insert	
-	jj: vi-movement-mode
+	"jj": vi-movement-mode
