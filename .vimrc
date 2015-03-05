@@ -1,5 +1,14 @@
 "TODO \C-c wq
+execute pathogen#infect()
 filetype plugin on
+
+" Forces vim to load present .vimrc file in current working directory
+set exrc
+" Security restric usage in non-default .vimrc
+set secure
+
+"set colorcolumn=110
+"highlight ColorColumn ctermbg=darkgray
 
 "Solarized Dark Theme 
 set background=dark
@@ -7,7 +16,7 @@ colorscheme solarized
 let g:solarized_termtrans=1
 " Make Vim more useful
 set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)
+" Use the OS clipboard by default (on versions compiled with `+clipboard`)s
 set clipboard=unnamed
 " Enhance command-line completion
 set wildmenu
