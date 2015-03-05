@@ -10,12 +10,6 @@
 [submodule ".vim/bundle/syntax_glsl"]
 	path = .vim/bundle/syntax_glsl
 	url = git://github.com/beyondmarc/glsl.vim.git
-[submodule ".vim/bundle/syntax_opengl"]
-	path = .vim/bundle/syntax_opengl
-	url = git://github.com/beyondmarc/opengl.vim.git
-[submodule ".vim/bundle/vim-glsl"]
-	path = .vim/bundle/vim-glsl
-	url = https://github.com/tikhomirov/vim-glsl
 [submodule "gnome-terminal-colors-solarized"]
 	path = gnome-terminal-colors-solarized
 	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
