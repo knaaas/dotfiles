@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
-#I found this script here https://github.com/mathiasbynens/dotfiles
+#I originally found this script here https://github.com/mathiasbynens/dotfiles
 
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master;
+git submodule init
+git submodule update 
+git submodule sync 
 
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
