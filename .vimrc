@@ -2,6 +2,11 @@
 execute pathogen#infect()
 filetype plugin on
 
+noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 1)<CR>
+noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
+noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
+noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
+
 " Forces vim to load present .vimrc file in current working directory
 set exrc
 " Security restric usage in non-default .vimrc
