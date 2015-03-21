@@ -7,6 +7,14 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
 
+"build on F7
+map<F7>  :make<CR>
+imap<F7> <ESC>:make<CR> 
+
+"debug on F5
+map<F5> :!gdb -ex r build/app<CR>
+imap<F5> <ESC>:!gdb -ex r build/app<CR>
+
 " Forces vim to load present .vimrc file in current working directory
 set exrc
 " Security restric usage in non-default .vimrc
