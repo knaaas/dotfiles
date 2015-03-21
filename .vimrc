@@ -12,8 +12,8 @@ map<F7>  :make<CR>
 imap<F7> <ESC>:make<CR> 
 
 "debug on F5
-map<F5> :!gdb -ex r build/app<CR>
-imap<F5> <ESC>:!gdb -ex r build/app<CR>
+map<F5> :!lldb -f build/app<CR>
+imap<F5> <ESC>:!lldb -f build/app<CR>
 
 " Forces vim to load present .vimrc file in current working directory
 set exrc
