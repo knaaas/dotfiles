@@ -46,6 +46,12 @@ set mouse=a
 "Autowrite files when using next and previous
 set autowrite
 
+" SEARCHING
+set incsearch           " search as characters are entered
+set hlsearch            " highlight matches
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+
 " VISUAL
 set number		" Enable line numbers
 syntax enable	" Enable syntax highlighting
