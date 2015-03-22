@@ -8,8 +8,8 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
 
 "build on F7
-map<F7>  :make<CR>
-imap<F7> <ESC>:make<CR> 
+map<F7>  :make!<bar>:botright cwindow<CR>
+imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
 
 "debug on F5
 map<F5> :!lldb -f build/app<CR>
