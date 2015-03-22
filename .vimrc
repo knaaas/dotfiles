@@ -66,6 +66,7 @@ set ruler		" Show cursor position in the right corner of window
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
 
+
 " DISABLE ANNOYING FEATURES 
 set noerrorbells	" Disable error bell
 set shortmess=I		" Don’t show the intro message when starting Vim
@@ -81,3 +82,6 @@ let mapleader=","
 inoremap jj <esc>
 au BufRead,BufNewFile *.md setl ft=md
 au BufRead,BufNewFile *.cpp setl ft=cpp
+" Move vertically by visual line instead of actual line
+nnoremap j gj 
+nnoremap k gk
