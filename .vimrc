@@ -8,7 +8,7 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
 
 "ycm compiler arguments
-g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
+let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
 "build on F7
 map<F7>  :make!<bar>:botright cwindow<CR>
