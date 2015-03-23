@@ -19,11 +19,9 @@ flags = [
     'c++',
     '-I',
     '.',
-    #OSX C++ 14 Headers
+    # OSX Clang C++ 14 Headers
     '-isystem',
-    '/usr/include/c++/4.2.1',
-    '-isystem',
-    '/usr/include/c++/4.2.1/tr1',
+    '/Library/Developer/CommandLineTools/usr/include/c++/v1/'
 ]
 
 if compilation_database_folder:
