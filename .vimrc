@@ -93,5 +93,5 @@ inoremap jj <esc>
 au BufRead,BufNewFile *.md setl ft=md
 au BufRead,BufNewFile *.cpp setl ft=cpp
 " Move vertically by visual line instead of actual line
-nnoremap j gj
-nnoremap k gk
+"nnoremap j gj
+"nnoremap k gk
