@@ -7,6 +7,13 @@ noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
 
+"Template master 
+"Template directory searched before builtin templates
+let g:templates_directory = '~/.vim/templates' 
+let g:templates_no_builtin_templates = 1 "Disable Built int templates
+let g:username = 'Anton Ingfors' " %USER%
+let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
+
 "ycm compiler arguments
 let g:ycm_global_ycm_extra_conf = '~/.vim/.ycm_extra_conf.py'
 
@@ -86,5 +93,5 @@ inoremap jj <esc>
 au BufRead,BufNewFile *.md setl ft=md
 au BufRead,BufNewFile *.cpp setl ft=cpp
 " Move vertically by visual line instead of actual line
-nnoremap j gj 
+nnoremap j gj
 nnoremap k gk
