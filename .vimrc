@@ -2,6 +2,18 @@
 execute pathogen#infect()
 filetype plugin on
 
+"KEYBINDINGS
+map Y y$
+let mapleader=","
+" turn off search highlight
+nnoremap <leader><space> :nohlsearch<CR>
+inoremap jj <esc>
+au BufRead,BufNewFile *.md setl ft=md
+au BufRead,BufNewFile *.cpp setl ft=cpp
+
+" Move vertically by visual line instead of actual line
+"nnoremap j gj
+"nnoremap k gk
 noremap <silent> <c-u> :call smooth_scroll#up(&scroll, 5, 1)<CR>
 noremap <silent> <c-d> :call smooth_scroll#down(&scroll, 5, 1)<CR>
 noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
@@ -61,8 +73,6 @@ set autowrite
 " SEARCHING
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
-" turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
 
 " VISUAL
 set number		" Enable line number
@@ -89,12 +99,3 @@ filetype indent on	" Automatically switch to cindent if it is supported
 set shiftwidth=4	" Make autoindentation four spaces
 set tabstop=4		" Make your tabs as wide as four spaces
 
-"KEYBINDINGS
-map Y y$
-let mapleader=","
-inoremap jj <esc>
-au BufRead,BufNewFile *.md setl ft=md
-au BufRead,BufNewFile *.cpp setl ft=cpp
-" Move vertically by visual line instead of actual line
-"nnoremap j gj
-"nnoremap k gk
