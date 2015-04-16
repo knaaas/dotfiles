@@ -25,6 +25,8 @@ imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
 map<F5> :!lldb -f build/app<CR>
 imap<F5> <ESC>:!lldb -f build/app<CR>
 
+" Encryption used on encrypted files
+set cryptmethod=blowfish2
 " Forces vim to load present .vimrc file in current working directory
 set exrc
 " Security restric usage in non-default .vimrc
@@ -63,7 +65,8 @@ set hlsearch            " highlight matches
 nnoremap <leader><space> :nohlsearch<CR>
 
 " VISUAL
-set number		" Enable line numbers
+set number		" Enable line number
+set rnu 		" Enable relative number
 syntax enable	" Enable syntax highlighting
 set cursorline	" Highlight current line
 set title 		" Show the filename in the window titlebar
