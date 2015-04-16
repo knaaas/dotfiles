@@ -19,3 +19,6 @@
 [submodule ".vim/bundle/vim-smooth-scroll"]
 	path = .vim/bundle/vim-smooth-scroll
 	url = https://github.com/terryma/vim-smooth-scroll.git
+[submodule ".vim/bundle/vim-template"]
+	path = .vim/bundle/vim-template
+	url = https://github.com/aperezdc/vim-template.git
