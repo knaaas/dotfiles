@@ -20,9 +20,11 @@ noremap <silent> <c-b> :call smooth_scroll#up(&scroll*2, 2, 1)<CR>
 noremap <silent> <c-f> :call smooth_scroll#down(&scroll*2, 2, 1)<CR>
 
 "Template master 
-"Template directory searched before builtin templates
+"Additional global template directory searched before builtin templates
 let g:templates_directory = '~/.vim/templates' 
-let g:templates_no_builtin_templates = 1 "Disable Built int templates
+"Prefix of global template files
+let g:templates_global_name_prefix = 'vim-template'  
+let g:templates_no_builtin_templates = 1 "Disable builtin templates
 let g:username = 'Anton Ingfors' " %USER%
 let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
 
