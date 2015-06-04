@@ -8,12 +8,19 @@ let mapleader=","
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 inoremap jj <esc>
-au BufRead,BufNewFile *.md setl ft=md
-au BufRead,BufNewFile *.cpp setl ft=cpp
-
+"build on F7
+map<F7>  :make!<bar>:botright cwindow<CR>
+imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
+"debug on F5
+map<F5> :!lldb -f build/app<CR>
+imap<F5> <ESC>:!lldb -f build/app<CR>
 " Move vertically by visual line instead of actual line
 "nnoremap j gj
 "nnoremap k gk
+
+au BufRead,BufNewFile *.md setl ft=md
+au BufRead,BufNewFile *.cpp setl ft=cpp
+
 
 "Template master 
 "Additional global template directory searched before builtin templates
@@ -24,13 +31,6 @@ let g:templates_no_builtin_templates = 1 "Disable builtin templates
 let g:username = 'Anton Ingfors' " %USER%
 let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
 
-"build on F7
-map<F7>  :make!<bar>:botright cwindow<CR>
-imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
-
-"debug on F5
-map<F5> :!lldb -f build/app<CR>
-imap<F5> <ESC>:!lldb -f build/app<CR>
 
 " Encryption used on encrypted files
 set cryptmethod=blowfish2
@@ -83,7 +83,6 @@ set ruler		" Show cursor position in the right corner of window
 " RECOVERY
 set backupdir=~/.vim/backups
 set directory=~/.vim/swaps
-
 
 " DISABLE ANNOYING FEATURES 
 set noerrorbells	" Disable error bell
