@@ -1,10 +1,35 @@
-"TODO \C-c wq
-execute pathogen#infect()
-filetype plugin on
+" Disable Vi compatible
+set nocompatible
 
-"KEYBINDINGS
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	GENERAL	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax enable	" Enable syntax highlighting
+set number		" Enable line number
+set rnu 		" Enable relative number
+set cursorline	" Highlight current line
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	INFORMATION	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set title 			" Show the filename in the window titlebar
+set showmode		" Show the current mode in command-line
+set laststatus=2	" Always show status bar over command line
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	FEATURES	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set wildmenu	" Enhance command-line completion
+" Use OS clipboard by default (on versions compiled with `+clipboard`)
+set clipboard=unnamed
+
+au BufRead,BufNewFile *.md setl ft=md
+au BufRead,BufNewFile *.cpp setl ft=cpp
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	KEYMAPPINGS and INPUT
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 map Y y$
-let mapleader=","
 " turn off search highlight
 nnoremap <leader><space> :nohlsearch<CR>
 inoremap jj <esc>
@@ -18,78 +43,62 @@ imap<F5> <ESC>:!lldb -f build/app<CR>
 "nnoremap j gj
 "nnoremap k gk
 
-au BufRead,BufNewFile *.md setl ft=md
-au BufRead,BufNewFile *.cpp setl ft=cpp
+" Enable mouse in all modes
+set mouse=a
 
+let mapleader=","
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	FONTS and GRAPHICS	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Solarized Dark Theme 
+set background=dark
+colorscheme solarized
+let g:solarized_termtrans=1
+
+" Show “invisible” characters
+"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	PATHOGEN	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+execute pathogen#infect()
+filetype plugin on
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	TEMPLATE MASTER	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Template master 
+let g:username = 'Anton Ingfors' " %USER%
+let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
+
 "Additional global template directory searched before builtin templates
 let g:templates_directory = '~/.vim/templates' 
 "Prefix of global template files
 let g:templates_global_name_prefix = 'vim-template'  
 let g:templates_no_builtin_templates = 1 "Disable builtin templates
-let g:username = 'Anton Ingfors' " %USER%
-let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
 
-
-" Encryption used on encrypted files
-set cryptmethod=blowfish2
-" Forces vim to load present .vimrc file in current working directory
-set exrc
-" Security restric usage in non-default .vimrc
-set secure
-
-"set colorcolumn=110
-"highlight ColorColumn ctermbg=darkgray
-
-"Solarized Dark Theme 
-set background=dark
-colorscheme solarized
-let g:solarized_termtrans=1
-" Make Vim more useful
-set nocompatible
-" Use the OS clipboard by default (on versions compiled with `+clipboard`)s
-set clipboard=unnamed
-" Enhance command-line completion
-set wildmenu
-" Optimize for fast terminal connections
-set ttyfast
-" Show “invisible” characters
-"set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
-"set list
-" Always show status line
-set laststatus=2
-" Enable mouse in all modes
-set mouse=a
-
-"Autowrite files when using next and previous
-set autowrite
-
-" SEARCHING
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	SEARCHING	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set incsearch           " search as characters are entered
 set hlsearch            " highlight matches
 
-" VISUAL
-set number		" Enable line number
-set rnu 		" Enable relative number
-syntax enable	" Enable syntax highlighting
-set cursorline	" Highlight current line
-set title 		" Show the filename in the window titlebar
-
-" STATUS BAR
-set showmode	" Show the current mode
-set ruler		" Show cursor position in the right corner of window 
-
-" RECOVERY
-set backupdir=~/.vim/backups
-set directory=~/.vim/swaps
-
-" DISABLE ANNOYING FEATURES 
-set noerrorbells	" Disable error bell
-set shortmess=I		" Don’t show the intro message when starting Vim
-
-" INDENTATION
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	INDENTATION	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype indent on	" Automatically switch to cindent if it is supported
 set shiftwidth=4	" Make autoindentation four spaces
 set tabstop=4		" Make your tabs as wide as four spaces
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	SWAP AND BACKUP	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nobackup
+set noswapfile
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	FIX ANNOYING FEATURES	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noerrorbells	" Disable error bell
+set shortmess=I		" Don’t show the intro message when starting Vim
