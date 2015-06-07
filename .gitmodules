@@ -1,9 +1,3 @@
-[submodule "gnome-terminal-colors-solarized"]
-	path = gnome-terminal-colors-solarized
-	url = https://github.com/Anthony25/gnome-terminal-colors-solarized.git
-[submodule ".vim/bundle/ctrlp.vim"]
-	path = .vim/bundle/ctrlp.vim
-	url = https://github.com/kien/ctrlp.vim
-[submodule ".vim/bundle/vim-template"]
-	path = .vim/bundle/vim-template
-	url = https://github.com/aperezdc/vim-template.git
+[submodule "solarized-mate-terminal"]
+	path = solarized-mate-terminal
+	url = https://github.com/oz123/solarized-mate-terminal/
