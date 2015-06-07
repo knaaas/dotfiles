@@ -5,7 +5,7 @@ case $- in
 esac
 
 PATH="$PATH:$HOME/bin"
-PS1='\e[0;32m\]\u@\h\e[m\] \w \e[0;32m\$\e[m\]'
+PS1='\[\e[0;32m\][\u@\h\[\e[m\] \w\[\e[0;32m\]]$\[\e[m\] '
 
 HISTCONTROL=ignoreboth		# Don't put duplicate lines or lines starting with space in the history.
 shopt -s checkwinsize
