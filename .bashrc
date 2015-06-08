@@ -4,6 +4,10 @@ case $- in
       *) return;;
 esac
 
+if [ $(uname -s) = 'Linux' ]; then
+	xmodmap .xmodmaprc
+fi
+
 PATH="$PATH:$HOME/bin"
 PS1='\[\e[0;32m\][\u@\h\[\e[m\] \w\[\e[0;32m\]]$\[\e[m\] '
 
