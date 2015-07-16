@@ -53,7 +53,7 @@ let mapleader=","
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "Solarized Dark Theme 
 set background=dark
-colorscheme solarized
+colorscheme anton
 let g:solarized_termtrans=1
 
 " Show “invisible” characters
