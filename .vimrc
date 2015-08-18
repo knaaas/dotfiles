@@ -1,5 +1,6 @@
 " Disable Vi compatible
 set nocompatible
+set backspace=2
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	GENERAL	
