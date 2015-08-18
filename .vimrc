@@ -5,14 +5,14 @@ set nocompatible
 "	GENERAL	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable	" Enable syntax highlighting
-set number		" Enable line number
-set rnu 		" Enable relative number
+set number	" Enable line number
+set rnu 	" Enable relative number
 set cursorline	" Highlight current line
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	INFORMATION	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set title 			" Show the filename in the window titlebar
+set title 		" Show the filename in the window titlebar
 set showmode		" Show the current mode in command-line
 set laststatus=2	" Always show status bar over command line
 
@@ -29,10 +29,10 @@ au BufRead,BufNewFile *.cpp setl ft=cpp
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	KEYMAPPINGS and INPUT
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map Y y$
+" Needs to be declared before any leader map using leader
+let mapleader = "," 
 " turn off search highlight
-nnoremap <leader><space> :nohlsearch<CR>
-inoremap jj <esc>
+map <leader><space> :nohlsearch<CR>
 "build on F7
 map<F7>  :make!<bar>:botright cwindow<CR>
 imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
@@ -40,13 +40,12 @@ imap<F7> <ESC>:make!<bar>:botright cwindow<CR>
 map<F5> :!lldb -f build/app<CR>
 imap<F5> <ESC>:!lldb -f build/app<CR>
 " Move vertically by visual line instead of actual line
-"nnoremap j gj
-"nnoremap k gk
+nnoremap j gj
+nnoremap k gk
 
 " Enable mouse in all modes
 set mouse=a
 
-let mapleader=","
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	FONTS and GRAPHICS	
@@ -66,23 +65,10 @@ execute pathogen#infect()
 filetype plugin on
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"	TEMPLATE MASTER	
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"Template master 
-let g:username = 'Anton Ingfors' " %USER%
-let g:email = 'anton.ingfors@protonmail.ch' " %MAIL%
-
-"Additional global template directory searched before builtin templates
-let g:templates_directory = '~/.vim/templates' 
-"Prefix of global template files
-let g:templates_global_name_prefix = 'vim-template'  
-let g:templates_no_builtin_templates = 1 "Disable builtin templates
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	SEARCHING	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set incsearch           " search as characters are entered
-set hlsearch            " highlight matches
+set incsearch       " search as characters are entered
+set hlsearch        " highlight matches
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	INDENTATION	
@@ -100,5 +86,5 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	FIX ANNOYING FEATURES	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set noerrorbells	" Disable error bell
-set shortmess=I		" Don’t show the intro message when starting Vim
+set visualbell
+set t_vb=
