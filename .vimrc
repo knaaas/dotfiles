@@ -59,6 +59,15 @@ let g:solarized_termtrans=1
 " Show “invisible” characters
 "set lcs=tab:▸\ ,trail:·,eol:¬,nbsp:_
 
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"	GVIM	
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set guioptions-=m  "remove menu bar
+set guioptions-=T  "remove toolbar
+set guioptions-=r  "remove right-hand scroll bar
+set guioptions-=L  "remove left-hand scroll bar
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	PATHOGEN	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -87,5 +96,5 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "	FIX ANNOYING FEATURES	
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set visualbell
+set novisualbell 	" Disable visalbell
 set t_vb=
